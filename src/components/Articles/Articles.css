@@ -1,0 +1,75 @@
+.articles {
+  padding: 4rem 4rem 4rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.articles-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;                       /* enables horizontal scrolling */
+  scroll-snap-type: x mandatory;          /* snaps to each card */
+  padding-bottom: 1rem;
+}
+
+.articles-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.articles-track::-webkit-scrollbar-thumb {
+  background: var(--highlight);
+  border-radius: 3px;
+}
+
+.article-card {
+  min-width: 300px;
+  max-width: 300px;
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  flex-shrink: 0;                         /* prevents cards from squishing */
+  scroll-snap-align: start;              /* snap point for each card */
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.article-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);            /* lifts card on hover */
+}
+
+.article-date {
+  font-size: 0.8rem;
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.article-card h3 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin: 0.5rem 0 0.75rem;
+}
+
+.article-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--subtle);
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--highlight);
+}
+
+@media (max-width: 768px) {
+  .articles {
+    padding: 2rem;
+  }
+}

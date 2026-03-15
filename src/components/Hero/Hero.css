@@ -1,0 +1,65 @@
+.hero {
+  display: flex;
+  align-items: center;                    /* vertically center both sides */
+  gap: 3rem;                              /* space between image and text */
+  padding: 6rem 4rem;                     /* decent spacing on desktop */
+}
+
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;                     /* this makes it a circle */
+  object-fit: cover;                      /* crops image to fit without stretching */
+  flex-shrink: 0;                         /* prevents image from shrinking */
+  border: 3px solid var(--highlight);
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(15deg); }
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--highlight);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--subtle);
+  margin-bottom: 1rem;
+}
+
+.intro strong {
+  color: var(--accent);
+}
+
+.cta-text {
+  font-style: italic;
+  color: var(--highlight);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;               /* stack vertically */
+    text-align: center;
+    padding: 2rem;
+  }
+}
