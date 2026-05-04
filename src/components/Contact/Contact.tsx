@@ -4,9 +4,9 @@ import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import './Contact.css'
 
-const EMAILJS_SERVICE_ID = 'service_e77qtmx'
-const EMAILJS_TEMPLATE_ID = 'template_yfizgqu'
-const EMAILJS_PUBLIC_KEY = 'LH5Cbvy9fmgB-2S_1'
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 function Contact() {
   const formRef = useRef<HTMLFormElement>(null)
