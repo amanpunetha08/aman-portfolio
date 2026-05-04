@@ -1,0 +1,120 @@
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 1.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  z-index: 1;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.timeline-item.expanded .timeline-dot {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.timeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.2s, background 0.3s;
+}
+
+.timeline-item.expanded .timeline-card {
+  border-color: var(--accent);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.timeline-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline-company {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.timeline-meta {
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.timeline-bullets {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-bullets li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.timeline-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-header {
+    flex-direction: column;
+  }
+
+  .timeline-meta {
+    text-align: left;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}

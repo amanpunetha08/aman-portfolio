@@ -1,25 +1,25 @@
-import heroImg from '../../assets/heroImg.jpg'
 import './Hero.css'
+
+const TAGS = ['TypeScript', 'Python', 'AWS', 'Docker', 'React', 'Microservices']
 
 function Hero() {
   return (
-    <section className="hero">
-      <img src={heroImg} alt="Aman Punetha" className='avatar' />
-      <div className='intro'>
-        <h1>Hi, I'm Aman Punetha <span className='wave'>👋</span></h1>
-        <p className='tagline'>Backend Engineer · System Designer · Cloud Native Builder</p>
-        <p>
-          I design <strong>scalable systems</strong> and <strong>cloud-native applications</strong> — 
-          from APIs and distributed workflows to automated data pipelines. 
-          My toolkit includes TypeScript, Python, AWS, and Docker.
+    <section className="hero" id="hero">
+      <div className="container hero-inner">
+        <h1>Aman Punetha</h1>
+        <h2>Full-Stack Software Engineer</h2>
+        <p className="hero-subtitle">Turning Complex Problems into Scalable Solutions</p>
+        <p className="hero-desc">
+          Building scalable web applications and microservices with 4+ years of experience across the entire SDLC — from RESTful APIs and distributed workflows to containerized deployments on AWS.
         </p>
-        <p>
-          Currently exploring the intersection of <strong>backend engineering</strong> and <strong>AI</strong> — 
-          building workflows where systems think, process, and decide using large language models.
-        </p>
-        <p className='cta-text'>
-          This is where I share what I build, how I architect, and what excites me.
-        </p>
+        <div className="hero-tags">
+          {TAGS.map(t => <span className="tag" key={t}>{t}</span>)}
+        </div>
+        <div className="hero-ctas">
+          <a href="#projects" className="btn btn-primary">View Projects</a>
+          <a href="/resume.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">Download CV</a>
+          <a href="#contact" className="btn btn-ghost">Contact Me</a>
+        </div>
       </div>
     </section>
   )

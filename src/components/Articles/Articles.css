@@ -29,7 +29,7 @@
   min-width: 300px;
   max-width: 300px;
   padding: 1.5rem;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--border);
   border-radius: 12px;
   text-decoration: none;
   color: var(--text);
@@ -39,7 +39,7 @@
 }
 
 .article-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px var(--shadow);
   transform: translateY(-4px);            /* lifts card on hover */
 }
 

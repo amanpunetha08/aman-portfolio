@@ -1,0 +1,86 @@
+.daily-progress {
+    padding: 4rem 4rem;;
+}
+
+.progress-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+}
+
+.progress-loading{
+    color: var(--subtle);
+}
+
+.progress-card-wrapper {
+    min-width: 300px;
+    max-width: 300px;
+    height: 180px;
+    perspective: 800px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+.progress-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.progress-card-wrapper:hover .progress-card {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-front {
+    background: var(--bg);
+}
+
+.card-front h3{
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.card-front p{
+    font-size: 0.95rem;
+    color: var(--subtle);
+    line-height: 1.5;
+}
+
+.card-back {
+    background: var(--accent);
+    transform: rotateY(180deg);
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.stat-badge {
+    padding: 0.4rem 0.8rem;
+    background: var(--bg);
+    color: var(--accent);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
