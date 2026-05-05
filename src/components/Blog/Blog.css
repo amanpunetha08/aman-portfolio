@@ -1,0 +1,165 @@
+.blog-underline {
+  width: 50px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 0.8rem auto 1rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  display: block;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.blog-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.blog-card h3 {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-date {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card-summary {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.blog-card-link {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Blog Post Page */
+.blog-back {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-back:hover {
+  text-decoration: underline;
+}
+
+.blog-post-title {
+  text-align: left;
+}
+
+.blog-post-date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.blog-prompts {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.blog-prompt-card {
+  padding: 1.2rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+}
+
+.blog-prompt-card:hover {
+  border-color: var(--accent);
+}
+
+.prompt-content {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Rich content */
+.blog-rich-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blog-rich-content p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.blog-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+}
+
+.blog-table th,
+.blog-table td {
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog-table th {
+  background: var(--bg-card);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.blog-table td:first-child {
+  width: 40px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.blog-table td:nth-child(2) {
+  width: 160px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.blog-table a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.blog-table a:hover {
+  text-decoration: underline;
+}
