@@ -12,6 +12,10 @@ function BlogPost() {
   const { id } = useParams()
   const post = blogPosts.find(p => p.id === id)
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id])
+
   if (!post) {
     return (
       <section id="blog">
