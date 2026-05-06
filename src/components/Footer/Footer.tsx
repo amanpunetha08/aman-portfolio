@@ -13,6 +13,11 @@ function Footer() {
   const formRef = useRef<HTMLFormElement>(null)
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!formRef.current) return
@@ -34,7 +39,7 @@ function Footer() {
             <div className="footer-links">
               <h4>Quick Links</h4>
               <ul>
-                {LINKS.map(l => <li key={l}><a href={`#${l.toLowerCase()}`}>{l}</a></li>)}
+                {LINKS.map(l => <li key={l}><a href="#" onClick={(e) => { e.preventDefault(); scrollTo(l.toLowerCase()) }}>{l}</a></li>)}
               </ul>
             </div>
             <div className="footer-links">
