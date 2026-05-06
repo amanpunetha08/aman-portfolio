@@ -10,7 +10,6 @@ import Footer from './components/Footer/Footer'
 import BlogList from './components/Blog/BlogList'
 import BlogPost from './components/Blog/BlogPost'
 import Personal from './components/Personal/Personal'
-import Contact from './components/Contact/Contact'
 import ChatWidget from './components/ChatWidget'
 
 function Home() {

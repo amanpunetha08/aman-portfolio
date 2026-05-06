@@ -1,13 +1,26 @@
 .footer {
-  padding-top: 3rem;
+  padding-top: 4rem;
   margin-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
 .footer-main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 4rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 .footer-left {
@@ -17,7 +30,7 @@
 }
 
 .footer-logo {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 800;
   background: var(--gradient);
   -webkit-background-clip: text;
@@ -68,18 +81,39 @@
 }
 
 .footer-socials a {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--text-muted);
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
 
 .footer-socials a:hover {
   color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* Right side - Contact form */
+.footer-right {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient);
+  border-radius: 16px 16px 0 0;
+}
+
 .footer-right h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   background: var(--gradient);
   -webkit-background-clip: text;
@@ -91,35 +125,49 @@
 .footer-right > p {
   color: var(--text-muted);
   font-size: 0.88rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.9rem;
 }
 
 .footer-form input,
 .footer-form textarea {
-  padding: 0.7rem 1rem;
-  background: var(--bg-card);
+  padding: 0.75rem 1rem;
+  background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   color: var(--text);
   font-size: 0.88rem;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .footer-form input:focus,
 .footer-form textarea:focus {
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
 .footer-form textarea {
   resize: vertical;
+}
+
+.footer-form button {
+  margin-top: 0.3rem;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.footer-form button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 .footer-form button:disabled {
@@ -146,5 +194,8 @@
   }
   .footer-nav {
     grid-template-columns: 1fr 1fr;
+  }
+  .footer-right {
+    padding: 1.5rem;
   }
 }
