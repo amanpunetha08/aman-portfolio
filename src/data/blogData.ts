@@ -9,6 +9,13 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'building-rag-chatbot',
+    title: 'Building an AI ChatBot with RAG from Scratch',
+    summary: 'How I built a production-ready chatbot using Django, ChromaDB, and multiple LLM providers with a Retrieval-Augmented Generation pipeline.',
+    date: '2026-05-06',
+    richContent: true,
+  },
+  {
     id: '15-leetcode-patterns',
     title: '15 LeetCode Patterns You Must Know',
     summary: 'A curated collection of 15 essential problem-solving patterns with reference links to the best explanations and templates.',

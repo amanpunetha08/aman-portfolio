@@ -2,10 +2,12 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { blogPosts } from '../../data/blogData'
 import LeetCodePatterns from './posts/LeetCodePatterns'
+import BuildingRAGChatbot from './posts/BuildingRAGChatbot'
 import './Blog.css'
 
 const RICH_POSTS: Record<string, React.FC> = {
   '15-leetcode-patterns': LeetCodePatterns,
+  'building-rag-chatbot': BuildingRAGChatbot,
 }
 
 function BlogPost() {
