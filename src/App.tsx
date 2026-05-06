@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer'
 import BlogList from './components/Blog/BlogList'
 import BlogPost from './components/Blog/BlogPost'
 import Personal from './components/Personal/Personal'
+import ChatWidget from './components/ChatWidget'
 
 function Home() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/personal" element={<Personal />} />
       </Routes>
       <Footer />
+      <ChatWidget />
     </HashRouter>
   )
 }
