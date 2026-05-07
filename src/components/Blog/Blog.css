@@ -6,6 +6,237 @@
   margin: 0.8rem auto 1rem;
 }
 
+/* Section Labels */
+.blog-section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin: 2.5rem 0 1rem;
+}
+
+/* Featured Grid */
+.blog-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-card--featured {
+  display: block;
+  padding: 1.8rem;
+  background: var(--bg-card);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.blog-card--featured:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+}
+
+.blog-card-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  background: rgba(99, 102, 241, 0.08);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.blog-card--featured h3 {
+  color: var(--text);
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.blog-card--featured .blog-card-summary {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.blog-card--featured .blog-card-link {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Directory */
+.blog-directory {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.blog-directory-group {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-directory-group:last-child {
+  border-bottom: none;
+}
+
+.blog-directory-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  padding-top: 0.4rem;
+}
+
+.blog-directory-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.blog-directory-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.blog-directory-item:hover {
+  background: var(--bg-card);
+}
+
+.blog-directory-title {
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.blog-directory-item:hover .blog-directory-title {
+  color: var(--accent);
+}
+
+.blog-directory-arrow {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.blog-directory-item:hover .blog-directory-arrow {
+  opacity: 1;
+}
+
+/* View All Link */
+.blog-view-all {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.blog-view-all-link {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+
+.blog-view-all-link:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Blog All Table */
+.blog-search {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.blog-search:focus {
+  border-color: var(--accent);
+}
+
+.blog-search::placeholder {
+  color: var(--text-muted);
+}
+
+.blog-no-results {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 1rem !important;
+  font-size: 0.9rem;
+}
+
+.blog-all-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.blog-all-table th {
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  padding: 0.8rem 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.blog-all-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.blog-all-date {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  white-space: nowrap;
+  width: 110px;
+}
+
+.blog-all-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.15s;
+}
+
+.blog-all-link:hover {
+  color: var(--accent);
+}
+
+.blog-all-table tr:hover {
+  background: var(--bg-card);
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

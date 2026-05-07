@@ -8,6 +8,7 @@ import Projects from './components/Projects/Projects'
 import Services from './components/Services/Services'
 import Footer from './components/Footer/Footer'
 import BlogList from './components/Blog/BlogList'
+import BlogAll from './components/Blog/BlogAll'
 import BlogPost from './components/Blog/BlogPost'
 import Personal from './components/Personal/Personal'
 import ChatWidget from './components/ChatWidget'
@@ -32,6 +33,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<BlogAll />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/personal" element={<Personal />} />
       </Routes>

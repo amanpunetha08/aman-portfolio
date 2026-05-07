@@ -5,15 +5,60 @@ export interface BlogPost {
   date: string
   content?: string[]
   richContent?: boolean
+  featured?: boolean
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: 'sd-single-server',
+    title: 'System Design #1: Single Server Setup',
+    summary: 'Everything on one box — request flow, DNS, traffic sources (web vs mobile), and why this breaks at scale.',
+    date: '2026-05-07',
+    richContent: true,
+    featured: true,
+  },
+  {
+    id: 'sd-database',
+    title: 'System Design #2: Database Separation & SQL vs NoSQL',
+    summary: 'Splitting web and data tiers for independent scaling, and choosing between relational and non-relational databases.',
+    date: '2026-05-07',
+    richContent: true,
+  },
+  {
+    id: 'sd-scaling',
+    title: 'System Design #3: Vertical vs Horizontal Scaling',
+    summary: 'Scale up (bigger machine) vs scale out (more machines) — limitations, trade-offs, and why horizontal wins at scale.',
+    date: '2026-05-07',
+    richContent: true,
+  },
+  {
+    id: 'sd-load-balancer',
+    title: 'System Design #4: Load Balancer',
+    summary: 'Distributing traffic across servers with public/private IPs, failover handling, and improved availability.',
+    date: '2026-05-07',
+    richContent: true,
+  },
+  {
+    id: 'sd-db-replication',
+    title: 'System Design #5: Database Replication',
+    summary: 'Master-slave replication for performance, reliability, and high availability — plus failover scenarios.',
+    date: '2026-05-07',
+    richContent: true,
+  },
+  {
+    id: 'sd-cache',
+    title: 'System Design #6: Cache Tier',
+    summary: 'Read-through caching with Redis/Memcached — expiration, consistency, SPOF mitigation, and eviction policies (LRU/LFU/FIFO).',
+    date: '2026-05-07',
+    richContent: true,
+  },
   {
     id: 'building-rag-chatbot',
     title: 'Building an AI ChatBot with RAG from Scratch',
     summary: 'How I built a production-ready chatbot using Django, ChromaDB, and multiple LLM providers with a Retrieval-Augmented Generation pipeline.',
     date: '2026-05-06',
     richContent: true,
+    featured: true,
   },
   {
     id: '15-leetcode-patterns',
