@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { blogPosts } from '../../data/blogData'
 import './Blog.css'
 
 function BlogAll() {
   const [query, setQuery] = useState('')
+
+  useEffect(() => { window.scrollTo(0, 0) }, [])
+
   const sorted = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date))
   const filtered = sorted.filter(p =>
     p.title.toLowerCase().includes(query.toLowerCase()) ||
